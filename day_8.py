@@ -14,3 +14,20 @@ def odd_even(li):
                     continue
         else:
             continue
+
+# Extra Challenge: List of Prime Numbers
+
+def isprime(n): # let's define a function to determine whether a number is prime
+    for num in range(2, int(n**0.5)+1):
+        if n%num == 0:
+            return False
+    return True
+
+def prime_number(n):
+    prime_numbers = []
+    for i in range(2, n):
+        if isprime(i):
+            prime_numbers.append(i)
+        else:
+            continue
+    return prime_numbers
