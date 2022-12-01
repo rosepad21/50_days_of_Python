@@ -1,11 +1,10 @@
+# Day 5: My Discount
 def my_discount():
-    inp1 = float(input('Enter the price: '))
-    inp2 = float(input('Enter the discount: ').strip('%'))
-    return inp1 - (inp1 * inp2 / 100)
+    inp1 = float(input('Enter the price: ')) # asking the user to input the price
+    inp2 = float(input('Enter the discount: ').strip('%')) # and the discount. we remove the %
+    return inp1 - (inp1 * inp2 / 100) # calculating discounted price
 
-
-#print(my_discount())
-
+# Extra challenge: Tuple of Student Sex
 def tuple_student(li):
     new = []
     male_count = 0
@@ -17,7 +16,4 @@ def tuple_student(li):
             female_count += 1
     new.append(tuple(['male', male_count]))
     new.append(tuple(['female', female_count]))
-    return new
-
-print(tuple_student(['Male', 'Female', 'female', 'male', 'male', 'male',
- 'female', 'male', 'Female', 'Male', 'Female', 'Male', 'female']))
+    return new # returning a list of two tuple containing the number of male and female students
