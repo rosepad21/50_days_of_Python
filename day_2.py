@@ -1,24 +1,21 @@
-def convert_add(str):
-    if len(str) == 0:
+# Day 2: Strings to Integers
+def convert_add(strs):
+    if len(strs) == 0:
         return 0
     count = 0
-    for i in str:
-        count += int(i)
+    for i in strs:
+        count += int(i) # we convert the numbers in the list into integers and we sum them
     return count
 
-print(convert_add(['1','3','5']))
-
-
-def check_duplicates(str):
-    dup = set()
-    for i in str:
-        if str.count(i) > 1:
+# Extra challenge: Duplicate names
+def check_duplicates(li):
+    dup = set() # initiating a set for duplicate values, so that they get stored only once
+    for i in li:
+        if li.count(i) > 1: # if the list has duplicates we add them to the set
             dup.add(i)
         else:
             continue
     if len(dup) == 0:
-        return "No duplicates"
+        return "No duplicates" 
     else:
         return dup
-
-print(check_duplicates(['apple', 'orange', 'banana']))
